@@ -13,7 +13,7 @@ const projects = [
     title: "Dashboard Financeiro",
     desc: "Dashboard financeiro para controle de receitas e despesas, com visualização clara de saldo e dados financeiros. Desenvolvido em React com foco em performance e experiência do usuário.",
     tech: ["React", "TypeScript", "Vite", "CSS3", "Git & GitHub"],
-    image: "./src/images/img-dash-financeiro.png",
+    image: "./src/images/img-dash-financeiro.png", //e
     demo: "https://lista-tarefas-react-eight.vercel.app/",
     github: "https://github.com/lucasSperb/dashboard-financeiro"
   }
