@@ -1,0 +1,88 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.cursor {
+  color: #ff1e1e;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero p {
+  margin-top: 20px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.hero-tags {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-tags span {
+  background: #1a1a1a;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.hero-tags span:hover {
+  background: #ff1e1e;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons button {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-buttons .outline {
+  background: transparent;
+  border: 1px solid #ff1e1e;
+  color: #ff1e1e;
+}
+
+.hero-buttons .outline:hover {
+  background: #ff1e1e;
+  color: white;
+}
+
+.hero-glow {
+  position: absolute;
+  right: -200px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,30,30,0.4), transparent 70%);
+  filter: blur(80px);
+  z-index: 1;
+}

@@ -1,0 +1,61 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.navbar h2 {
+  color: #ff1e1e;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff1e1e;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+.navbar li.active {
+  color: #ff1e1e;
+  text-shadow: 0 0 10px rgba(255,0,0,0.7);
+}
+
+.navbar li.active::after {
+  width: 100%;
+}
+
+.navbar li {
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}

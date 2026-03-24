@@ -1,0 +1,10 @@
+.contact-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+}
+
+.contact a {
+  color: #ff1e1e;
+}
