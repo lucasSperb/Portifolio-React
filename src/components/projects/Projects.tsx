@@ -5,7 +5,7 @@ const projects = [
     title: "Convite de Aniversário Online",
     desc: "Aplicação web para criação e exibição de convites de aniversário digitais, com layout responsivo e design moderno. Desenvolvida em React, permitindo fácil compartilhamento e personalização do evento.",
     tech: ["React", "TypeScript", "Vite", "CSS3", "Git & GitHub"],
-    image: "/images/img-convite.png",
+    image: "/img-convite.png",
     demo: "https://convite-aniversario-topaz.vercel.app/",
     github: "https://github.com/lucasSperb/convite-aniversario"
   },
@@ -13,7 +13,7 @@ const projects = [
     title: "Dashboard Financeiro",
     desc: "Dashboard financeiro para controle de receitas e despesas, com visualização clara de saldo e dados financeiros. Desenvolvido em React com foco em performance e experiência do usuário.",
     tech: ["React", "TypeScript", "Vite", "CSS3", "Git & GitHub"],
-    image: "/images/img-dash-financeiro.png", //e
+    image: "/img-dash-financeiro.png", //e
     demo: "https://lista-tarefas-react-eight.vercel.app/",
     github: "https://github.com/lucasSperb/dashboard-financeiro"
   }
