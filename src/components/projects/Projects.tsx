@@ -10,12 +10,22 @@ const projects = [
     github: "https://github.com/lucasSperb/convite-aniversario"
   },
   {
-    title: "Dashboard Financeiro",
-    desc: "Dashboard financeiro para controle de receitas e despesas, com visualização clara de saldo e dados financeiros. Desenvolvido em React com foco em performance e experiência do usuário.",
-    tech: ["React", "TypeScript", "Vite", "CSS3", "Git & GitHub"],
-    image: "/img-dash-financeiro.png", //e
-    demo: "https://lista-tarefas-react-eight.vercel.app/",
-    github: "https://github.com/lucasSperb/dashboard-financeiro"
+    title: "Dashboard Financeiro Pro",
+    desc: "Aplicação web completa para gerenciamento financeiro pessoal, com sistema de entradas e saídas, visualização de saldo em tempo real e gráfico interativo. Possui máscara de moeda brasileira (R$), animações com Framer Motion, notificações com Toast e interface responsiva com foco em experiência do usuário.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Zustand",
+      "Framer Motion",
+      "Recharts",
+      "React Hot Toast",
+      "CSS3",
+      "Git & GitHub"
+    ],
+    image: "/img-dash-react.png",
+    demo: "https://dashboard-financeiro-react.vercel.app/",
+    github: "https://github.com/lucasSperb/dashboard-financeiro-react"
   }
 ];
 
