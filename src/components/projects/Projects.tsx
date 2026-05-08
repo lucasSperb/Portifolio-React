@@ -4,7 +4,13 @@ const projects = [
   {
     title: "Convite de Aniversário Online",
     desc: "Aplicação web para criação e exibição de convites de aniversário digitais, com layout responsivo e design moderno. Desenvolvida em React, permitindo fácil compartilhamento e personalização do evento.",
-    tech: ["React", "TypeScript", "Vite", "CSS3", "Git & GitHub"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "CSS3",
+      "Git & GitHub"
+    ],
     image: "/img-convite.png",
     demo: "https://convite-aniversario-topaz.vercel.app/",
     github: "https://github.com/lucasSperb/convite-aniversario"
@@ -26,6 +32,23 @@ const projects = [
     image: "/img-dash-react.png",
     demo: "https://dashboard-financeiro-react.vercel.app/",
     github: "https://github.com/lucasSperb/dashboard-financeiro-react"
+  },
+  {
+    title: "Habit Tracker",
+    desc: "Aplicação web para acompanhamento de hábitos e metas diárias, permitindo registrar progresso, visualizar estatísticas e manter consistência ao longo do tempo. Conta com interface moderna, experiência responsiva e foco em produtividade e organização pessoal.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Icons",
+      "LocalStorage",
+      "Git & GitHub"
+    ],
+    image: "/img-habit.png",
+    demo: "https://habit-tracker-kappa-ten.vercel.app/",
+    github: "https://github.com/lucasSperb/habit-tracker"
   }
 ];
 
