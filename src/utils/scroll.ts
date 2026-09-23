@@ -1,15 +1,20 @@
-export const highlightAndScroll = (id: string): void => {
-  const section = document.getElementById(id);
+export function highlightAndScroll(id: string) {
+  const element = document.getElementById(id);
 
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+  if (!element) return;
 
-    section.classList.remove("highlight-section");
-    void section.offsetWidth;
-    section.classList.add("highlight-section");
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 
-    setTimeout(() => {
-      section.classList.remove("highlight-section");
-    }, 2000);
-  }
-};
+  element.classList.remove("section-highlight");
+
+  void element.offsetWidth;
+
+  element.classList.add("section-highlight");
+
+  window.setTimeout(() => {
+    element.classList.remove("section-highlight");
+  }, 1400);
+}

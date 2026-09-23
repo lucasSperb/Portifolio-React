@@ -1,4 +1,4 @@
- .navbar {
+.navbar {
   position: fixed;
   width: 100%;
   top: 0;
@@ -8,7 +8,10 @@
   align-items: center;
   justify-content: space-between;
   z-index: 100;
-  transition: 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -52,19 +55,21 @@
   color: #929292;
   border-radius: 7px;
   font-size: 0.84rem;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .navbar li button:hover {
   color: #fff;
-  transform: none;
+  transform: translateY(-1px);
 }
 
 .navbar li button.active {
   color: #fff;
 }
 
-.navbar li button.active::after,
-.navbar li button:hover::after {
+.navbar li button.active::after {
   content: "";
   position: absolute;
   left: 12px;
@@ -73,7 +78,23 @@
   height: 2px;
   background: #e50914;
   border-radius: 2px;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
 }
+
+.navbar li button:hover::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 3px;
+  height: 2px;
+  background: rgba(229, 9, 20, 0.7);
+  border-radius: 2px;
+}
+
+/* =========================
+   MENU MOBILE
+========================= */
 
 .menu-toggle {
   display: none;
@@ -91,8 +112,138 @@
   height: 2px;
   margin: 4px 0;
   background: #fff;
-  transition: 0.25s;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* =========================
+   BRILHO DA SEÇÃO
+========================= */
+
+.section-highlight {
+  position: relative;
+  isolation: isolate;
+  animation: sectionHighlight 1.4s ease-out;
+}
+
+.section-highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(229, 9, 20, 0.14),
+      rgba(229, 9, 20, 0.05) 35%,
+      transparent 70%
+    );
+
+  opacity: 0;
+  animation: sectionGlow 1.4s ease-out;
+}
+
+.section-highlight::after {
+  content: "";
+  position: absolute;
+  inset: 10px 7vw;
+  z-index: -1;
+  pointer-events: none;
+
+  border: 1px solid rgba(229, 9, 20, 0);
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 0 rgba(229, 9, 20, 0),
+    0 0 0 rgba(229, 9, 20, 0);
+
+  animation: sectionBorderGlow 1.4s ease-out;
+}
+
+@keyframes sectionHighlight {
+  0% {
+    background-color: rgba(229, 9, 20, 0.08);
+  }
+
+  35% {
+    background-color: rgba(229, 9, 20, 0.025);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes sectionGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  65% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes sectionBorderGlow {
+  0% {
+    border-color: rgba(229, 9, 20, 0);
+    box-shadow:
+      0 0 0 rgba(229, 9, 20, 0),
+      0 0 0 rgba(229, 9, 20, 0);
+  }
+
+  25% {
+    border-color: rgba(229, 9, 20, 0.55);
+    box-shadow:
+      0 0 25px rgba(229, 9, 20, 0.18),
+      0 0 60px rgba(229, 9, 20, 0.08);
+  }
+
+  60% {
+    border-color: rgba(229, 9, 20, 0.2);
+    box-shadow:
+      0 0 35px rgba(229, 9, 20, 0.08),
+      0 0 80px rgba(229, 9, 20, 0.03);
+  }
+
+  100% {
+    border-color: rgba(229, 9, 20, 0);
+    box-shadow:
+      0 0 0 rgba(229, 9, 20, 0),
+      0 0 0 rgba(229, 9, 20, 0);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 750px) {
   .navbar {
@@ -113,19 +264,27 @@
     top: calc(100% + 8px);
     left: 18px;
     right: 18px;
+
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 3px;
+
     padding: 10px;
+
     border: 1px solid #292929;
     border-radius: 14px;
+
     background: rgba(12, 12, 12, 0.97);
     backdrop-filter: blur(16px);
+
     opacity: 0;
     pointer-events: none;
     transform: translateY(-8px);
-    transition: 0.25s ease;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
   }
 
   .navbar ul.open {
@@ -137,5 +296,21 @@
   .navbar li button {
     width: 100%;
     text-align: left;
+  }
+
+  .section-highlight::after {
+    inset: 8px 18px;
+  }
+}
+
+/* =========================
+   REDUÇÃO DE MOVIMENTO
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .section-highlight,
+  .section-highlight::before,
+  .section-highlight::after {
+    animation: none;
   }
 }

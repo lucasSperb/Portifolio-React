@@ -23,7 +23,7 @@ export default function Contact() {
 
       <div className="contact-links">
         <a href="mailto:lucas305.sperb@gmail.com">lucas305.sperb@gmail.com</a>
-        <a href="https://linkedin.com/in/lucasSperb" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/lucas-sperb-779a5a243/?isSelfProfile=true" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
         <a href="https://github.com/lucasSperb" target="_blank" rel="noreferrer">
