@@ -1,0 +1,141 @@
+ .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 16px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(7, 7, 7, 0.82);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #202020;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.brand:hover {
+  transform: none;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.navbar li button {
+  position: relative;
+  padding: 10px 12px;
+  background: transparent;
+  color: #929292;
+  border-radius: 7px;
+  font-size: 0.84rem;
+}
+
+.navbar li button:hover {
+  color: #fff;
+  transform: none;
+}
+
+.navbar li button.active {
+  color: #fff;
+}
+
+.navbar li button.active::after,
+.navbar li button:hover::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 3px;
+  height: 2px;
+  background: #e50914;
+  border-radius: 2px;
+}
+
+.menu-toggle {
+  display: none;
+  padding: 8px;
+  background: transparent;
+}
+
+.menu-toggle:hover {
+  transform: none;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin: 4px 0;
+  background: #fff;
+  transition: 0.25s;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    padding: 13px 18px;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 102;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 18px;
+    right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    padding: 10px;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    background: rgba(12, 12, 12, 0.97);
+    backdrop-filter: blur(16px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: 0.25s ease;
+  }
+
+  .navbar ul.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar li button {
+    width: 100%;
+    text-align: left;
+  }
+}

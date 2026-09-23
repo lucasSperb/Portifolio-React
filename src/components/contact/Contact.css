@@ -1,0 +1,92 @@
+ .contact {
+  border-top: 1px solid #202020;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(229, 9, 20, 0.1), transparent 30%),
+    #090909;
+}
+
+.contact-inner {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 55px;
+  border: 1px solid #242424;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #111, #0b0b0b);
+}
+
+.contact-label {
+  color: #e50914;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contact h2 {
+  max-width: 700px;
+  margin-top: 10px;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.contact p {
+  max-width: 620px;
+  margin-top: 18px;
+  color: #888;
+  line-height: 1.7;
+}
+
+.contact-cta {
+  flex-shrink: 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #e50914;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.contact-cta:hover {
+  background: #ff2e38;
+  transform: translateY(-3px);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 28px;
+  color: #666;
+  font-size: 0.82rem;
+}
+
+.contact-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #ff3b43;
+}
+
+@media (max-width: 700px) {
+  .contact-inner {
+    padding: 28px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}
