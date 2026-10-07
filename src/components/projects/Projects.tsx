@@ -22,7 +22,7 @@ const projects: Project[] = [
     solution:
       "Sistema web com módulos de gestão, dashboard e arquitetura preparada para evoluir como produto por assinatura.",
     tech: ["React", "TypeScript", "FastAPI", "Python", "SQLAlchemy", "PostgreSQL"],
-    image: "/img-dash-financeiro.png",
+    image: "/img-estoque.png",
     demo: "#",
     github: "https://github.com/lucasSperb/estoque-pro",
   },

@@ -5,10 +5,10 @@ const skills = [
   { name: "TypeScript", level: 85 },
   { name: "CSS", level: 90 },
   { name: "HTML5", level: 90 },
-  { name: "Git & GitHub", level: 70 },
-  { name: "Vite", level: 70 },
-  { name: "Python / FastAPI", level: 65 },
-  { name: "PostgreSQL", level: 60 },
+  { name: "Git & GitHub", level: 80 },
+  { name: "Vite", level: 90 },
+  { name: "Python / FastAPI", level: 80 },
+  { name: "PostgreSQL", level: 80 },
 ];
 
 export default function Skills() {
